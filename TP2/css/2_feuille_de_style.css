@@ -33,17 +33,17 @@ li {
     float: left;
     list-style-type: none;
     color: black;
-    background-color: red;
+    background-color: lightgreen;
     width: 150px;
     display: block;
+    text-align: center;
 }
 
 li:hover {
-    background-color: blue;
+    background-color: lightpink;
 }
 
 ul {
-    border: 0px solid yellow;
     width: 462px;
     margin: auto;
     display: inline;
@@ -62,8 +62,16 @@ a {
     color: white;
 }
 
+div.separator {
+    margin: 80px;
+}
+
 nav {
     margin: auto;
-    width: 70%;
-    border: 0px solid red;
+    width: 492px;
+    height: 1px;
+    padding-top: 50px;
 }
+
+
+/* ======= règles exercice 3 ======= */
