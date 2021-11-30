@@ -1,0 +1,2 @@
+Les colonnes 1 et 2 ont chacune 200px de largeur+2*2px de border. De plus, il y a 10px entre elles, donc la largeur totale est de 418px.
+Avec un `margin-left` de 428px, il y a donc 10px de marge entre la colonne 2 et la colonne 3.
