@@ -1,77 +1,122 @@
-h1 {
-    margin: 3px 0px 20px 0px;
-    padding: 20px 0px 20px 0px;
-    border: 2px;
-    border-style: solid hidden solid hidden;
-    border-color: lightblue;
-    text-align: center;
-}
-
 body {
-    padding: 0px 10px 0px 10px;
-    border: 2px;
-    border-style: hidden solid hidden solid;
-    min-width: 800px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 0 10px;
     max-width: 1024px;
+    min-width: 800px;
     margin: auto;
 }
 
-div#intro {
-    margin: 0px 20% 0px 20%;
+h1 {
     text-align: center;
-    /*ex2*/
-    clear: both;
+    padding: 20px 0 20px 0;
+    border-top: 2px solid lightblue;
+    border-bottom: 2px solid lightblue;
+}
+
+div#intro {
+    text-align: center;
+    width: 60%;
+    margin: auto;
 }
 
 
 /* ======= règles exercice 2 ======= */
 
-li {
-    padding: 5px;
-    border: 2px solid blue;
+nav>ul {
+    padding-top: 50px;
+    width: 456px;
     margin: auto;
+}
+
+nav>ul>li {
     float: left;
     list-style-type: none;
-    color: black;
+    border: solid 2px blue;
+    margin: 0 -1px;
+}
+
+nav>ul>li>a {
     background-color: lightgreen;
-    width: 150px;
     display: block;
+    width: 150px;
+    text-decoration: none;
     text-align: center;
 }
 
-li:hover {
+nav>ul>li>a:hover {
     background-color: lightpink;
 }
 
-ul {
-    width: 462px;
-    margin: auto;
-    display: inline;
+div.separator {
+    clear: both;
+    padding-top: 50px;
 }
 
 nav>ul>li>ul {
     display: none;
 }
 
-div#menub {
-    display: none;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-div.separator {
-    margin: 80px;
-}
-
-nav {
-    margin: auto;
-    width: 492px;
-    height: 1px;
-    padding-top: 50px;
-}
-
 
 /* ======= règles exercice 3 ======= */
+
+nav>ul li:hover>ul {
+    display: block;
+}
+
+nav>ul>li>ul {
+    padding: 0px;
+    padding-bottom: 20px;
+    width: 153px;
+    margin-left: -2px;
+}
+
+nav>ul>li>ul {
+    position: absolute;
+}
+
+nav>ul>li>ul>li {
+    list-style-type: none;
+    border: solid 2px blue;
+    margin-bottom: -2px;
+}
+
+nav>ul>li>ul>li>a {
+    background-color: lightgreen;
+    display: block;
+    width: 150px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav>ul>li>ul>li>a:hover {
+    background-color: lightpink;
+}
+
+
+/* ======= règles exercice 4 ======= */
+
+section {
+    width: 75%;
+    float: left;
+}
+
+div#twitterfeed {
+    height: 500px;
+    width: 24%;
+    display: inline-block;
+    border-left: 1px solid red;
+}
+
+
+/* ======= règles exercice 5 ======= */
+
+article {
+    width: 31%;
+    margin: 1%;
+    float: left;
+}
+
+div#suite {
+    clear: both;
+}
