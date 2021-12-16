@@ -1,0 +1,27 @@
+nav>ul {
+    display: inline-block;
+    background-color: lightpink;
+    font-weight: bold;
+    border: 2px;
+    width: 300px;
+    padding: 0%
+}
+
+ul {
+    list-style: none;
+}
+
+li:hover:not(ul ul:hover) {
+    font-style: italic;
+}
+
+li ul {
+    display: none;
+}
+
+li:hover ul {
+    display: block;
+    background-color: lightgray;
+    padding: 0%;
+    font-style: normal;
+}

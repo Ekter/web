@@ -6,6 +6,7 @@
     <title>Exercice 1 d'application CSS+</title>
     <link rel="stylesheet" type="text/css" href="../css/seance3.css">
     <link rel="stylesheet" type="text/css" media="screen and (max-width : 600px)" href="../css/smartphone.css">
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
@@ -14,18 +15,19 @@
         <h1>Exercice 1 - Les colonnes et leur positionnement</h1>
     </header>
     <nav>
-        <div id="menub">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <attention>
+            <div id="menub">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </attention>
         <ul>
             <li><a href="">Entrée 1</a></li>
             <li><a href="">Entrée 2</a>
                 <ul>
-                    <li><a href="">sous-menu 1</a></li>
-                    <li><a href="">sous-menu 2</a></li>
-                    <li><a href="">sous-menu 3</a></li>
+                    <li><a href="">Sous-menu 2.1</a></li>
+                    <li><a href="">Sous-menu 2.2</a></li>
                 </ul>
             </li>
             <li><a href="">Entrée 3</a></li>
@@ -33,6 +35,11 @@
     </nav>
 
     <div class="separator"></div>
+    <div class="class1">1</div>
+    <attention>
+        <div class="class1">2</div>
+    </attention>
+    <div class="class1">3</div>
 
     <section>
         <div id="intro">
@@ -60,7 +67,9 @@
         </article>
 
         <div id="suite">
-            <p>The most fundamental types of display are inline, block and none and they can be manipulated with the display property and the shockingly surprising values inline, block and none.</p>
+            <p>
+                <attention>The most fundamental types of display are inline, block and none and they can be manipulated with the display property and the shockingly surprising values inline, block and none.</attention>
+            </p>
         </div>
     </section>
     <div id="twitterfeed">

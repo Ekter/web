@@ -5,6 +5,7 @@
     margin-left: 0px;
 }
 
+a~b+a>b a,
 li {
     clear: both;
     display: none;
@@ -32,4 +33,12 @@ nav:hover #menub {
 
 nav>ul:hover li {
     display: block;
+}
+
+attention {
+    color: red;
+    display: inline-block;
+    background-color: pink;
+    width: 8cm;
+    height: 100px;
 }
