@@ -1,5 +1,9 @@
 {
     "files.exclude": {
         "**/.git": false
-    }
+    },
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "ServicesWeb/json-20200518.jar"
+    ]
 }
