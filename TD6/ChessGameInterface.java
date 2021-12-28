@@ -88,6 +88,7 @@ public class ChessGameInterface {
 	* @return the value associated to the key.
 	*/
 	public static String getValueFromKeyJSON(String json, String jsonkey) {
+		
 		//TODO.
 		return null;
 	}
@@ -103,3 +104,4 @@ public class ChessGameInterface {
 		//System.out.println("La valeur associée à la clé " + jsonkey + "est : " + cgi.getValueFromKeyJSON(json,jsonkey));
 	}
 }
+
