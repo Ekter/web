@@ -4,6 +4,7 @@
     },
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "ServicesWeb/json-20200518.jar"
+        "ServicesWeb/json-20200518.jar",
+        "TD6/json-20200518.jar"
     ]
 }
