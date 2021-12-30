@@ -129,7 +129,7 @@ public class ChessGameInterface {
 				System.out.println(" ".repeat(level) + "String : " + object);
 			}else{
 				System.out.println(" ".repeat(level) + "Other : " + object.toString());
-		}
+			}
 		}
 	}
 
