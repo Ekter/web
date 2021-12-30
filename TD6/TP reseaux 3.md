@@ -54,3 +54,7 @@ Content-Type: application/json
     ]
 }
 ```
+
+Exercice 2: Manipulation d'objets JSON en Java
+
+J'ai choisi d'indenter l'affichage pour que ce soit plus lisible lorsque les JSONArray sont imbriqués.

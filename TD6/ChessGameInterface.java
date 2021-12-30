@@ -95,9 +95,41 @@ public class ChessGameInterface {
 		return obj.getString(jsonkey);
 	}
 
-	public static void jsonParser(JSONObject jo) {
+	public static void jsonParser(JSONObject jo, int level) {
 		for (String key : jo.keySet()) {
-			System.out.println(key + " : " + jo.get(key));
+			Object value = jo.get(key);
+			if (value instanceof JSONObject) {
+				System.out.println(" ".repeat(level) + "Object " + key + " :");
+				jsonParser((JSONObject) value, level + 1);
+			} else if (value instanceof JSONArray) {
+				System.out.println(" ".repeat(level) + "Array " + key + " :");
+				jsonArrayParser((JSONArray) value, level + 1);
+			} else if (value instanceof String) {
+				System.out.println(" ".repeat(level) + "String " + key + " : " + value);
+			}else{
+					System.out.println(" ".repeat(level) + "String " + key + " : " + value.toString());
+			}
+		}
+	}
+
+	public static void jsonParser(JSONObject jo) {
+		jsonParser(jo, 0);
+	}
+
+	public static void jsonArrayParser(JSONArray ja, int level) {
+		for (int i = 0; i < ja.length(); i++) {
+			Object object = ja.opt(i);
+			if (object instanceof JSONObject) {
+				System.out.println(" ".repeat(level) + "Object :");
+				jsonParser((JSONObject) object, level + 1);
+			} else if (object instanceof JSONArray) {
+				System.out.println(" ".repeat(level) + "Array :");
+				jsonArrayParser((JSONArray) object, level + 1);
+			} else if (object instanceof String) {
+				System.out.println(" ".repeat(level) + "String : " + object);
+			}else{
+				System.out.println(" ".repeat(level) + "Other : " + object.toString());
+		}
 		}
 	}
 
@@ -112,7 +144,10 @@ public class ChessGameInterface {
 		JSONObject jo = new JSONObject(json);
 		System.out.println(getValueFromKeyJSON(json, jsonkey));
 		jsonParser(jo);
-
+		// String betterJson = "{\"id\":\"123456\",\"tab1\":[\"item1\", \"item2\"]}";
+		String betterJson = "{\"a\":\"b\",\"b\":{\"c\":\"d\",\"e\":\"f\"},\"g\":[\"h\",\"i\",{\"b\":{\"c\":\"d\",\"e\":\"f\"}},{\"cours\":[{\"id_cours\": \"123456789A\",\"nom_cours\": \"arts-plasiques\",\"nombre_participants\": 0,\"facultatif\": true},{\"id_cours\": \"123456789B\",\"nom_cours\": \"peinture\",\"nombre_participants\": 100,\"facultatif\": false}]}]}";
+		JSONObject betterJo = new JSONObject(betterJson);
+		jsonParser(betterJo);
 		// System.out.println("La valeur associée à la clé " + jsonkey + "est : " +
 		// cgi.getValueFromKeyJSON(json,jsonkey));
 	}
