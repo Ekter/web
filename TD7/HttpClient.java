@@ -123,12 +123,6 @@ public class HttpClient {
 			s = getSecureSocket();
 		else
 			s = getPlainSocket();
-		// TODO
-		// check if there is a body for our request
-		// if so, add the Content-Length parameter with the size
-		// of the body in bytes.
-		// To get the number of bytes in a String s, you can do
-		// int lenBytes = s.getBytes("UTF-8").length
 		res = new String[2];
 		res[0] = "";
 		res[1] = "";
@@ -165,18 +159,6 @@ public class HttpClient {
 			}
 			sc.close();
 			System.out.println(rep);
-			// TODO
-			// The socket is already open. We need however to create a
-			// 1. PrintWriter object to send a message to the server
-			// 2. InputStream object to read the message sent by the server
-			// after sending a message, flush() the PrintWriter object
-			// ex. out.flush()
-			// read every line from the server
-			// put the full header into res[0]
-			// and the full body into res[1]
-			// header and body are separated by an empty string
-			// warning!! the body can have multiple empthy lines!!
-			// look at the slides from our course to complete this part
 		} catch (IOException ex) {
 			System.out.println("I/O error: " + ex.getMessage());
 		}
