@@ -275,6 +275,7 @@ public class ChessGame {
 		cg.initializeGame();
 		cg.setHPlayer("Mr. DUPONT");
 		cg.setAIPlayer();
+		cg.retrieveFenFromServer();
 		cg.launchGame();
 	}
 
