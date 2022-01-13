@@ -9,7 +9,7 @@ public class AIPlayer extends Player {
 	/**
 	* This method will request the server to use the AI to move a piece
 	*/
-	public int move() {
+	public int move() { 
 		//TODO: ask the server to move a piece with the help of the AI
 		
 		//Once the reply has been obtained, we need to check if we
