@@ -253,11 +253,11 @@ public class ChessGame {
 		do {
 			// a little delay before a new mouvement
 			// this time by the AI
-			try {
-				TimeUnit.SECONDS.sleep(1);
-			} catch (InterruptedException e) {
-				System.out.println("could'n sleep");
-			}
+			// try {
+			// 	TimeUnit.SECONDS.sleep(1);
+			// } catch (InterruptedException e) {
+			// 	System.out.println("could'n sleep");
+			// }
 			retries++;
 			// ask the AI mouvement on the server
 			codeMove = aiPlayer.move();
