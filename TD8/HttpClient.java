@@ -61,7 +61,7 @@ public class HttpClient {
 	/**
 	* Print the full request to be sent. This is just for debugging purposes and is a private method
 	**/
-	private void showFullRequest() {
+	public void showFullRequest() {
 		System.out.println("=== Req to Send ===");
 		System.out.println(httpHeader + "\r\n" + httpBody);
 	}

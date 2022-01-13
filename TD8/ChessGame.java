@@ -141,10 +141,13 @@ public class ChessGame {
 	private void retrieveFenFromServer() {
 		this.restClient.createReq("POST", "/api/v1/chess/one/fen");
 		this.restClient.addHeaderLine("Content-Type: application/x-www-form-urlencoded");
-		this.restClient.addBodyData("gameId=" + this.getGameId());
+		this.restClient.addBodyData("game_id=" + this.getGameId());
+		this.restClient.showFullRequest();
+		System.out.println(this.getGameId());
 		String[] rep = this.restClient.sendRequest();
+		System.out.println(rep[0]+rep[1]);
 		if (rep[0].contains("200 OK")) {
-			String fen = ChessGameInterface.getValueFromKeyJSON(rep[1], "fen");
+			String fen = ChessGameInterface.getValueFromKeyJSON(rep[1], "fen_string");
 			setFen(fen);
 		} else {
 			System.out.println("Error: " + rep);

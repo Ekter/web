@@ -12,7 +12,7 @@ public class AIPlayer extends Player {
 	public int move() {
 		this.restClient.createReq("POST", "/api/v1/chess/one/move/ai");
 		this.restClient.addHeaderLine("Content-Type: application/x-www-form-urlencoded");
-		this.restClient.addBodyData("gameId=" + this.gameId);
+		this.restClient.addBodyData("game_id=" + this.gameId);
 		String[] rep = this.restClient.sendRequest();
 		if (rep[0].contains("200 OK") && rep[1].contains("error")) {
 			System.out.println("Error: " + rep[1]);

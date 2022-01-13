@@ -22,7 +22,7 @@ public class HumainPlayer extends Player {
 	public int move() {
 		this.restClient.createReq("POST", "/api/v1/chess/one/move/player");
 		this.restClient.addHeaderLine("Content-Type: application/x-www-form-urlencoded");
-		this.restClient.addBodyData("from=" + this.nextMove.substring(0, 2) + "&to=" + this.nextMove.substring(2) + "&gameId=" + this.gameId);
+		this.restClient.addBodyData("from=" + this.nextMove.substring(0, 2) + "&to=" + this.nextMove.substring(2) + "&game_id=" + this.gameId);
 
 		String[] rep = this.restClient.sendRequest();
 		if (rep[0].contains("200 OK") && rep[1].contains("error")) {
