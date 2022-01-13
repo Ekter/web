@@ -6,5 +6,9 @@
         "lib/**/*.jar",
         "ServicesWeb/json-20200518.jar",
         "TD6/json-20200518.jar"
+    ],
+    "java.project.sourcePaths": [
+        "TD7",
+        "TD8"
     ]
 }
