@@ -7,20 +7,19 @@ public class AIPlayer extends Player {
 	}
 
 	/**
-	* This method will request the server to use the AI to move a piece
-	*/
+	 * This method will request the server to use the AI to move a piece
+	 */
 	public int move() {
-		//TODO: ask the server to move a piece with the help of the AI
-		
-		//Once the reply has been obtained, we need to check if we
-		//received a "200 OK"
-		//If not, return à -1
-		//If it is a "200 OK" but the JSON object contains
-		//"error", then return -1
-
-		// in all other cases, return 0 (success code)
-
-		return 0;
+		this.restClient.createReq("POST", "/api/v1/chess/one/move/ai");
+		this.restClient.addHeaderLine("Content-Type: application/x-www-form-urlencoded");
+		this.restClient.addBodyData("gameId=" + this.gameId);
+		String[] rep = this.restClient.sendRequest();
+		if (rep[0].contains("200 OK") && rep[1].contains("error")) {
+			System.out.println("Error: " + rep[1]);
+			return -1;
+		} else {
+			return 0;
+		}
 	}
 
 }
