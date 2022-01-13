@@ -135,7 +135,7 @@ public class ChessGameInterface {
 
 	public static void main(String[] args) {
 		ChessGameInterface cgi = new ChessGameInterface();
-		String fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+		String fen = "rnbqkbnr/pppp1ppp/8/4p3/8/P7/1PPPPPPP/RNBQKBNR w KQkq e6 0 2";
 		if (args.length == 1)
 			fen = args[0];
 		cgi.createHtmlChessBoard(fen);
