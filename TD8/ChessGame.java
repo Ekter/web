@@ -160,7 +160,7 @@ public class ChessGame {
 	 * new game at the server from the last known FEN
 	 */
 	private void restartGame() {
-		// Optional TODO !!
+		// Optional TODO
 
 		// Send a request to restart the game from the last known FEN
 
