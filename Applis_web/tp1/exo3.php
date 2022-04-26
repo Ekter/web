@@ -4,10 +4,16 @@
 	# d'une table contenant les diviseurs de '$N'
 	# (une seule ligne, autant de colonnes que de diviseurs)
 	function diviseurs($N) {
-
+		print "<table class='exo4'><tr>";
+		for ($i=1; $i <= $N; $i++) { 
+			if ($N%$i==0){
+				print "<td>$i</td>";
+			}
+		}
+		print "</tr></table>";
 	}
 
-	
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,7 +28,14 @@
 	<body>
 		<h1>TP 1 - Exo 3</h1>
 		<hr>
-		<h2>Les diviseurs de  </h2>
+		<h2>Les diviseurs de 
+			<?php
+				print $_GET["n"];
+			?> 
+			sont :</h2>
+		<?php diviseurs($_GET["n"])?>
+
+
 
 	</body>
 </html>

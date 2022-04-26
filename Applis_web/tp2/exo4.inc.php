@@ -14,6 +14,7 @@
                 $month[] = $filecontent[1];
                 $lang[] = $filecontent[2];
             }
+            echo $file;
         }
         echo "c";
     }

@@ -1,11 +1,17 @@
 <?php
 
 	# retourne une chaîne de caractères indiquant
-	# le résultat, où '$x' et '$y' sont les nombres
+	# le résultat, où '$i' et '$j' sont les nombres
 	# dont il fallait deviner la valeur du produit
-	# et '$user' la valeur proposée par l'utilisateur
-	function resultat($x,$y,$user) {
-
+	# et '$n' la valeur proposée par l'utilisateur
+	function resultatoperation($n,$i,$j) {
+		if ($n == $i*$j) {
+			return "Bravo, vous avez trouvé le résultat! $i i $j = $n";
+		} elseif ($n < $i*$j) {
+			return "C'est plus! $i x $j = ".$i*$j;
+		} else {
+			return "C'est moins! $i x $j = ".$i*$j;
+		}
 	}
 ?>
 <!DOCTYPE html>
@@ -21,7 +27,7 @@
 		<h1>TP 1 - Exo 11</h1>
 		<hr>
 		<p>
-			
+			<?php echo resultatoperation($_GET["n"],$_GET["i"],$_GET["j"]); ?>
 		</p>
 		<p>
 			<a class="bouton" href="exo11-formulaire.php">Autre multiplication</a>

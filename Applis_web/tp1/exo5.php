@@ -4,7 +4,16 @@
 	# d'une table 10x10 contenant les 10 tables de
 	# multiplication
 	function table() {
-
+		$html = "<table class='exo6'>";
+		for ($i=1; $i <= 10; $i++) { 
+			$html .= "<tr>";
+			for ($j=1; $j <= 10; $j++) { 
+				$html .= "<td><strong>$i</strong> x $j = ".($i*$j)."</td>";
+			}
+			$html .= "</tr>";
+		}
+		$html .= "</table>";
+		return $html;
 	}
 ?>
 <!DOCTYPE html>
@@ -20,6 +29,6 @@
 	<body>
 		<h1>TP 1 - Exo 5</h1>
 		<hr>
-		
+		<?php print table(); ?>
 	</body>
 </html>

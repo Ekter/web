@@ -7,7 +7,14 @@
 	#   dans l'intervalle [1, 49]
 	# - N un nombre tiré au hasard dans l'intervalle [1, 10]
 	function loto() {
-
+		$nombres = [];
+		for ($i = 0; $i < 5; $i++) {
+			$nombres[] = rand(1, 49);
+		}
+		sort($nombres);
+		$nombres = implode(",", $nombres);
+		$n = rand(1, 10);
+		return [ $nombres, $n ];
 	
 	}
 
@@ -29,7 +36,11 @@
 		<hr>
 		<h2>Loto Flash</h2>
 		<p>
-			
+			<?php
+				$resultat = loto();
+				echo "<p>Les cinq numéros : " . $resultat[0] . " - Le numéro chance : " . $resultat[1] . "</p>";
+			?>
+		</p>
 		</p>
 		<p>
 			<a class="bouton" href="exo8.php">Un autre Loto Flash</a>

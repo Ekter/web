@@ -4,8 +4,8 @@
 	# correspondant à '$week', le  numéro du
 	# jour de la semaine (0 -> dimanche, 1 -> lundi, ...)
 	function jour($week) {
-
-	
+		$jour = [ "dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi" ];
+		return $jour[$week];
 	}
 
 
@@ -22,6 +22,9 @@
 	<body>
 		<h1>TP 1 - Exo 10</h1>
 		<hr>
-		<h2> </h2>
+		<h2> <?php $j=$_GET["jour"];
+			$m=$_GET["mois"];
+			$a=$_GET["annee"];
+		echo "Le $j/$m/$a est un " . jour(date("N", mktime(0, 0, 0, $m, $j, $a)));?></h2>
 	</body>
 </html>

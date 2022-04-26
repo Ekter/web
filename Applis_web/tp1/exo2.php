@@ -24,7 +24,7 @@
 			case 6:
 				return "samedi";
 				break;
-			case 7:
+			case 0:
 				return "dimanche";
 				break;
 			default:
@@ -78,7 +78,6 @@
 				return "mois";
 				break;
 		}
-
 	}
 
 
