@@ -6,6 +6,14 @@
     // doit être "dosignin.php" avec ce même paramètre "goto"
     // sinon l'action doit être le script "goto" sans paramètre
 
+
+    $redirect = $_GET['goto'] ?? "";
+    if($redirect == ""){
+        $action = "dosignin.php";
+    }else{
+        $action = "dosignin.php?goto=".$redirect;
+    }
+
     
 ?>
 <!DOCTYPE html>

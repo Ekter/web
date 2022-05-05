@@ -26,5 +26,5 @@
         }
     }
     // echo json_encode($_SESSION);
-    header('Location: signin.php');
+    header('Location: signin.php?badlogin=true');
 ?>
