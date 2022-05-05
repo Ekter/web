@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	// à compléter
-
-	
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,7 +19,11 @@
 		<p>
 <?php
     // à compléter
-    
+    if ($_SESSION['result']==$_GET['utilisateur']) {
+		echo "Bravo, ".$_SESSION['calcul'][0]."x".$_SESSION['calcul'][1]."=".$_SESSION['result']."!";
+	} else {
+		echo "Faux : ".$_SESSION['calcul'][0]."x".$_SESSION['calcul'][1]."=".$_SESSION['result'].", pas ".$_GET['utilisateur'];
+	}
 ?>
 		</p>
 		<p>

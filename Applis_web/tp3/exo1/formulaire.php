@@ -12,7 +12,11 @@
 	</head>
 <?php
     // à compléter
-    
+    $x=rand(1,10);
+	$y=rand(1,10);
+	$result=$x*$y;
+	$_SESSION['result']=$result;
+	$_SESSION['calcul']=[$x,$y];
 ?>
 	<body>
 		<h1>TP 3 - Exo 1</h1>
