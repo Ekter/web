@@ -2,33 +2,39 @@
     
     // remplit les tableaux '$day', '$month' et '$lang'
     // à partir des informations contenues dans les fichiers
-    // '*.txt' contenus dans le répertoire '$folderpath'
+    // '*.csv' contenus dans le répertoire '$folderpath'
     function fillArrays($folderpath,&$day,&$month,&$lang) {
         $files = scandir($folderpath);
         foreach ($files as $file) {
-            if (substr($file, -4) == '.txt') {
+            if (substr($file, -4) == '.csv') {
                 $filepath = $folderpath . '/' . $file;
-                $filecontent = file_get_contents($filepath);
-                $filecontent = explode(';', $filecontent);
-                $day[] = $filecontent[0];
-                $month[] = $filecontent[1];
-                $lang[] = $filecontent[2];
+                $filecontents = file($filepath);
+
+
+                // echo $filecontent;
+                // $filecontents = explode('\n', join('/n', $filecontent));
+                $lang[] = trim($filecontents[0]);
+                // foreach ($filecontents as $l) {
+                //     echo $l;
+                // }
+                // echo $filecontents[1];
+                $day[trim($filecontents[0])]=explode(',',trim($filecontents[1]));
+                $month[trim($filecontents[0])]=explode(',',trim($filecontents[2]));
             }
-            echo $file;
         }
-        echo "c";
     }
 
     // pour comprendre ce que cette fonction doit générer
     // regardez le code source HTML du fichier exemple fourni
 	function makeRadio($keyval,$name) {
         $radio="<div>";
-        echo "b";
-        foreach ($keyval as $key => $val) {
-            $radio .= '<input type="radio" name="' . $name . '" value="' . $key . '">' . $val . '<br>';
+        // echo "b";
+        foreach ($keyval as $val) {
+            $radio .= '<input type="radio" name="' . $name . '" value="' . $val . '">' . $val . '<br>';
             $radio .= "\n";
-            echo "a";
+            // echo "a";
         }
+
         $radio .= "</div>";
         return $radio;
     }
@@ -36,12 +42,12 @@
     // retourne une chaîne de caractères qui donne
     // la date dans la langue déterminée par le code '$langue'    
     function makeDate($langue,$jour,$mois) {
-		return $jour[$langue][date("w")] ." ".date("d") ." " . $mois[$langue][date("n")] . " " . date("Y");
+        // echo $jour[$langue][date("w")];
+		return $jour[$langue][date("w")] ." ".date("d") ." " . $mois[$langue][date("n")-1] . " " . date("Y");
     }
 
     $LANGUE = [];
     $JOUR = [];
     $MOIS = [];
-
-    fillArrays("exo4",$JOUR,$MOIS,$LANGUE);
+    fillArrays("exo4/",$JOUR,$MOIS,$LANGUE);
 ?>

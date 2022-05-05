@@ -1,8 +1,8 @@
 <?php
 
 	include("exo6.inc.php");
-	
-    // à compléter
+	$STUDENTS=student_array($STUDENT_FILE);
+	$SCORES=score_array($SCORE_FILE);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,7 +22,8 @@
 				<th>ID</th><th>Prénom</th><th>Nom</th><th>Trimestre 1</th><th>Trimestre 2</th><th>Trimestre 3</th><th>Moyenne</th>
 			</tr>
 <?php
-            
+	echo table_content($_GET["nom"],$STUDENTS,$SCORES);
+
 ?>
         </table>
         
