@@ -5,6 +5,12 @@
     // sans être authentifié, alors le script le redirige
     // vers le script de login avec le bon paramètre pour
     // pouvoir revenir sur ce script après le login
+	if (!isset($_SESSION['login'])) {
+		header('Location: signin.php?goto=page1.php');
+		exit();
+	}
+	$login=$_SESSION['login'];
+	
 ?>
 <!DOCTYPE html>
 <html lang="fr">

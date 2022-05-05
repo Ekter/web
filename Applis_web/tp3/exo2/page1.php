@@ -1,7 +1,10 @@
 <?php
 	session_start();
     // à compléter
-    
+	if (isset($_SESSION['login'])) {
+		header('Location: signin.php');
+	}
+    $login=$_SESSION['login'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">

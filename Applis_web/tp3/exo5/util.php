@@ -8,6 +8,21 @@
 	// correspondant
 	function get_content($lang,$page)
 	{
+		$content = array();
+		foreach( file("$lang/$page.txt") as $line )
+		{
+			$line = trim($line);
+			if( $line != "" )
+			{
+				$line = explode("#",$line);
+				if (str_contains($line[1],";")){
+					$line[1] = explode(";",$line[1]);
+				}
+				$content[ $line[0] ] = $line[1];
+
+			}
+		}
+		return $content;
 
 	}
 	
