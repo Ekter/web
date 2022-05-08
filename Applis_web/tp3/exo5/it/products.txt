@@ -1,4 +1,4 @@
-title#￼Prodotti
+title#Prodotti
 heading#I nostri prodotti
 paragraph#Vendiamo
 productlist#dizionari;metodi linguistici;film nella versione originale sottotitolati;romanzi in lingua originale

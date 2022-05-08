@@ -25,10 +25,14 @@
 			<a href="products.php?lang=en">en</a>
 			<a href="products.php?lang=it">it</a>
 		</div>
-        <!-- à compléter -->
-        
-        
-        
+		<h2><?php echo $content["title"]; ?></h2>
+		<p>
+		<?php echo $content["heading"]."\n<ul>";
+		foreach(explode($content["productlist"],";") as $val){
+			echo "<li>$val</li>";
+		}?>
+			</ul>
+		</p>
 		<div id="link">
 			<?php echo $content[ "linktext" ]; ?>
 			<div>

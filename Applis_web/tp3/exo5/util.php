@@ -15,23 +15,21 @@
 			if( $line != "" )
 			{
 				$line = explode("#",$line);
-				if (str_contains($line[1],";")){
-					$line[1] = explode(";",$line[1]);
-				}
 				$content[ $line[0] ] = $line[1];
-
+				print_r($content);
+				print("\n");
 			}
 		}
 		return $content;
-
 	}
-	
+
+	session_start();
+
 	// à compléter
 	// Dans cette partie, il faut
 	// - démarrer/reprendre une session
 	// - stocker dans le tableau $_SESSION
 	//   la langue
 	// Par défaut, la langue est le français
-
-	
-?>
+	isset($_GET["lang"]) ? $lang = $_GET["lang"] : $lang = "fr";
+	$_SESSION["lang"]=$lang;
