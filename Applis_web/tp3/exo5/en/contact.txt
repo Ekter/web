@@ -1,7 +1,7 @@
 title#Contact
 heading#Contact us
-email#by email
-phone#by phone
+email#By email
+phone#By phone
 linktext#To visit other pages click on the links below
 linkhome#Home
 linkproducts#Products

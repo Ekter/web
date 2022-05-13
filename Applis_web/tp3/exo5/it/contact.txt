@@ -1,4 +1,4 @@
-title#￼Contatti
+title#Contatti
 heading#Per contattarci
 email#Per email
 phone#Per telefono

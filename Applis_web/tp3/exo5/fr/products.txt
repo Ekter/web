@@ -1,8 +1,8 @@
 title#Produits
 heading#Nos produits
 paragraph#Nous vendons 
-productlist#des dictionnaires;des méthodes de langues;des films en VO sous-titrés;des romans en langue originale
-linktext#Pour visiter les autres pages, cliquez sur les liens ci-dessous
+productlist#des dictionnaires;des méthodes de langues;des films en VO sous-titrés;des romans en langue originale;je sais pas quoi d'autre;et même ça
+linktext#Pour visiter les autres pages, cliquez sur les boutons ci-dessous
 linkhome#Accueil
 linkproducts#Produits
 linkcontact#Contact

@@ -15,15 +15,12 @@
 			if( $line != "" )
 			{
 				$line = explode("#",$line);
-				$content[ $line[0] ] = $line[1];
-				print_r($content);
-				print("\n");
+				$content[$line[0]] = $line[1];
 			}
 		}
 		return $content;
 	}
 
-	session_start();
 
 	// à compléter
 	// Dans cette partie, il faut
@@ -31,5 +28,12 @@
 	// - stocker dans le tableau $_SESSION
 	//   la langue
 	// Par défaut, la langue est le français
-	isset($_GET["lang"]) ? $lang = $_GET["lang"] : $lang = "fr";
-	$_SESSION["lang"]=$lang;
+	session_start();
+	if (isset($_GET["lang"])){
+		$_SESSION["lang"] = $_GET["lang"];
+	}
+	else{
+		if (!isset($_SESSION["lang"])){
+			$_SESSION["lang"] = "fr";
+		}
+	}

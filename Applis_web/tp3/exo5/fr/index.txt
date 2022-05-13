@@ -1,7 +1,7 @@
 title#Accueil
-heading#Bienvenu sur MULTILINGUE !
+heading#Bienvenue sur MULTILINGUE !
 paragraph#Notre site est multilingue et vous pouvez choisir votre langue !
-linktext#Pour visiter les autres pages, cliquez sur les liens ci-dessous
+linktext#Pour visiter les autres pages, cliquez sur les boutons ci-dessous
 linkhome#Accueil
 linkproducts#Produits
 linkcontact#Contact

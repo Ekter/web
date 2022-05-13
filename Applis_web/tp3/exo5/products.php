@@ -1,7 +1,6 @@
 <?php
-
 	include("util.php");
-	
+	session_start();
 	$langue = $_SESSION[ "lang" ];
 	$content = get_content($langue,"products");
 	
@@ -28,7 +27,7 @@
 		<h2><?php echo $content["title"]; ?></h2>
 		<p>
 		<?php echo $content["heading"]."\n<ul>";
-		foreach(explode($content["productlist"],";") as $val){
+		foreach(explode(";", $content["productlist"]) as $val){
 			echo "<li>$val</li>";
 		}?>
 			</ul>

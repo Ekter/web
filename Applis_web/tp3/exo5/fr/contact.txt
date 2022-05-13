@@ -2,7 +2,7 @@ title#Contact
 heading#Nous contacter
 email#Par email à l'adresse suivante
 phone#Par téléphone
-linktext#To visit other pages click on the links below
+linktext#HAHAHA c'est du français
 linkhome#Accueil
 linkproducts#Produits
 linkcontact#Contact

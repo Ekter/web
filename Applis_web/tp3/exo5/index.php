@@ -1,7 +1,6 @@
 <?php
-
 	include("util.php");
-	
+	session_start();
 	$langue = $_SESSION[ "lang" ];
 	$content = get_content($langue,"index");
 	

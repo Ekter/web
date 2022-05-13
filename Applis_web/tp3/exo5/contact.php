@@ -1,7 +1,6 @@
 <?php
-
 	include("util.php");
-	
+	session_start();
 	$langue = $_SESSION[ "lang" ];
 	$content = get_content($langue,"contact");
 	
@@ -26,8 +25,11 @@
 			<a href="contact.php?lang=it">it</a>
 		</div>
         <!-- à compléter -->
-        
-        
+		<h2><?php echo $content["title"]; ?></h2>
+		<ul>
+			<li><?php echo $content["email"]; ?>: <a href="mailto:contact@multilingue.com">mailto:contact@multilingue.com</a></li>
+			<li><?php echo $content["phone"]; ?>: +33 4 12 34 56 78</li>
+		</ul>
         
 		<div id="link">
 			<?php echo $content[ "linktext" ]; ?>
