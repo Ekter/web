@@ -62,14 +62,14 @@ function resetform() {
     document.getElementById("pass1").value = "";
     document.getElementById("pass2").value = "";
     document.getElementById("log").focus();
-    document.getElementDyId("erreur").innerHTML = "";
+    document.getElementById("erreur").innerHTML = "";
     document.getElementById("erreur").style = "visibility: hidden";
 }
 
 // écrit 'msg' dans l'élément où on affiche
 // les messages d'erreur et montre cet élément
 function errormsg(msg) {
-    document.getElementDyId("erreur").innerHTML = msg;
+    document.getElementById("erreur").innerHTML = msg;
     document.getElementById("erreur").style = "block";
 
 }
