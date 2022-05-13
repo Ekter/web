@@ -13,8 +13,8 @@ var verifier = true;
 function nouvelle() {
     x = Math.floor(Math.random() * 9) + 1;
     y = Math.floor(Math.random() * 9) + 1;
-    document.getElementById("nombre1").innerHTML = random1;
-    document.getElementById("nombre2").innerHTML = random2;
+    document.getElementById("nombre1").innerHTML = x;
+    document.getElementById("nombre2").innerHTML = y;
     document.getElementById("bouton").value = "Vérifier";
     document.getElementById("resultat").style = "visibility: hidden";
 }
@@ -39,4 +39,5 @@ function valider() {
         verifier = true;
     }
 }
+
 console.log("a")
