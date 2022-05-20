@@ -1,4 +1,3 @@
-
 // le tableau qui contient le chemin
 // du fichier image pour chaque image
 var array = [];
@@ -24,18 +23,42 @@ var good_clicks_number = 0;
 // affecte à l'attribut src des deux images d'indice i et j
 // le source de l'image "point d'interrogation"
 function hide(i, j) {
-	
+    document.getElementsByTagName('img')[i].src = "images/question-mark.png";
+    document.getElementsByTagName('img')[j].src = "images/question-mark.png";
 }
 
 // gère le clic sur l'image d'indice n
 function click_image(n) {
-	
+    if (first_click) {
+        first_click = false;
+        first_index = n;
+        this.src = this.name;
+    } else {
+        if (array[n] == array[first_index] && n != first_index && clicked[n] == false && clicked[first_index] == false) {
+            good_clicks_number++;
+            clicked[n] = true;
+            clicked[first_index] = true;
+            first_click = true;
+            clicks_number++;
+            if (clicks_number == array.length / 2) {
+                alert("Bravo, vous avez gagné!");
+            }
+        } else {
+            setTimeout(hide, 1000, n, first_index);
+            first_click = true;
+            clicks_number++;
+        }
+    }
 }
 
 // rempli le tableau array avec la valeur de
 // l'attribut 'name' des images
 function init() {
-	
+    var arrimg = document.getElementsByTagName('img');
+    for (var i = 0; i < arrimg.length; i++) {
+        array[i] = arrimg[i].getAttribute('name');
+        arrimg[i].onclick = click_image;
+    }
 }
 
 window.onload = init;

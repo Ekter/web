@@ -9,39 +9,30 @@ window.onload = function() {
 
     // affiche le message 'm' avec la couleur 'c'
     // dans l'élément prévu à cet effet
-    function msg(m, c) {
+    function msg(m, c = null) {
         let el = document.getElementById('message');
         el.innerHTML = m;
-        el.style.color = c;
+        if (c) {
+            el.style.color = c;
+        }
     }
 
     // cette fonction est appelée à l'issue
     // du setTimeout
     function stop() {
-        if (chrono != null) {
-            clearTimeout(chrono);
-            chrono = null;
-            msg("<b>Temps écoulé!</b>", 'red');
-
-        }
-        msg('<b>Fin du chrono</b>', 'red');
+        clearTimeout(chrono);
+        chrono = null;
+        msg("<b>Temps écoulé!</b>");
     }
 
     // traite le "clic" sur un bouton radio
     function verifier() {
-        if (chrono != null) {
-            stop();
+        if (chrono == null) {
+            msg('<b>Fin du chrono</b>');
+            return;
         }
-        let radios = document.getElementsByTagName('input');
-        for (let i = 0; i < radios.length; i++) {
-            if (radios[i].checked) {
-                if (radios[i].innerHTML == 'data-ok') {
-                    ok = true;
-                }
-                break;
-            }
-        }
-        if (ok) {
+
+        if (this.hasAttribute('data-ok')) {
             msg('Bonne réponse', 'green');
         } else {
             msg('Mauvaise réponse', 'red');
@@ -55,6 +46,7 @@ window.onload = function() {
     for (var i = 0; i < arrinput.length; i++) {
         arrinput[i].onclick = verifier;
     }
+    msg("", "red");
 
 
 };
