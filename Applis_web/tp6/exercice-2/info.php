@@ -11,6 +11,7 @@
 			if ( $personnage[0] === $id )
 				break;
 		}
+		$info["img"] = $personnage[1];
 		$info["nom"] = $personnage[2];
 		$info["prenom"] = $personnage[3];
 		$info["sexe"] = $personnage[4];

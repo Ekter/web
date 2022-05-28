@@ -38,8 +38,8 @@
     
     <div id="templatemo_main">
     
-    	<div class="three_column margin_r35 vertical_divider">
-        	<h2>About</h2>
+        <div class="three_column margin_r35 vertical_divider">
+            <h2>About</h2>
             
             <div class="image_wrapper"><a href="#" target="_parent"><img src="images/templatemo_image_03.jpg" alt="CSS Templates" /></a></div>
 
@@ -57,7 +57,7 @@
 <?php
 	$fichier = fopen("database/1118.txt","r");
 	fpassthru($fichier);
-?>	
+?>
 </p>
 <!-- DYNAMIC CONTENT** -->            
 

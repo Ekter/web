@@ -10,7 +10,7 @@
 <script src="js/simpleajax.js"></script>
 <script src="js/ajax.js"></script>
 </head>
-<body> 
+<body>
 
 <div id="templatemo_wrapper">
 

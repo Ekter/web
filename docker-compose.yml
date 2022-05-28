@@ -9,76 +9,7 @@ services:
     environment:
       #For Windows and macOS, replace the line below with `host.docker.internal`, which will automatically resolve to the internal address of the host Docker is running on.
       #For Linux, replace the line below with your hostname, which you can obtain by executing `hostname` in Terminal.
-      XDEBUG_CONFIG: remote_host=host.docker.internal
+      XDEBUG_CONFIG: remote_host=here
 
-      #For macOS, if you use a local Homebrew php-fpm installation, port `9000` (which is the default debugging port) may become occupied. PhpStorm will remain silent on starting listening for incoming connections. If this is the case, in the Settings | Languages & Frameworks | PHP | Debug, set the Debug port to 9001, and use the following configuration line instead.
-
-      #XDEBUG_CONFIG: remote_host=host.docker.internal, remote_port=9001
-
-  #  sftp:
-  #    image: phpstorm/sftp-server
-  #    ports:
-  #      - "2022:22"
-  #    volumes:
-  #    #   Uncomment for Windows
-  #    # - C:/temp:/home/jetbrains/upload
-  #    #   Uncomment for macOS/Linux
-  #    # - /tmp:/home/jetbrains/upload
-  #    command: jetbrains:jetbrains:1001
-  #  mysql:
-  #    image: phpstorm/mysql
-  #    ports:
-  #      - "33056:3306"
-  #    volumes:
-  #      - ./data:/var/lib/mysql
-  #  db:
-  #    image: mysql
-  #    restart: always
-  #    environment:
-  #      MYSQL_DATABASE: 'db'
-  #      # So you don't have to use root, but you can if you like
-  #      MYSQL_USER: 'user'
-  #      # You can use whatever password you like
-  #      MYSQL_PASSWORD: 'password'
-  #      # Password for root access
-  #      MYSQL_ROOT_PASSWORD: 'password'
-  #    ports:
-  #      # <Port exposed> : < MySQL Port running inside container>
-  #      - '3306:3306'
-  #    expose:
-  #      # Opens port 3306 on the container
-  #      - '3306'
-  #      # Where our data will be persisted
-  #    volumes:
-  #      - my-db:/var/lib/mysql
-  # Names our volume
-  db:
-    image: mysql:5.7
-    container_name: db
-    environment:
-      MYSQL_ROOT_PASSWORD: my_secret_password
-      MYSQL_DATABASE: app_db
-      MYSQL_USER: db_user
-      MYSQL_PASSWORD: db_user_pass
-    ports:
-      # <Port exposed> : < MySQL Port running inside container>
-      - '3306:3306'
-    expose:
-      # Opens port 3306 on the container
-      - '3306'
-    volumes:
-      - data:/var/lib/mysql
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: pma
-    links:
-      - db
-    environment:
-      PMA_HOST: db
-      PMA_PORT: 3306
-      PMA_ARBITRARY: 1
-    restart: always
-    ports:
-      - "8081:80"
 volumes:
   data:
