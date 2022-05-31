@@ -1,0 +1,66 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #e7e0cf;
+    font-family: Ubuntu;
+    background-color: #272727;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+.chatroom {
+    color: #bbbbbb;
+}
+
+.button {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border: #000 solid 1px;
+    background-color: #5a4a63;
+    text-decoration: none;
+    margin: 10px;
+    padding: 5px;
+}
+
+.button a:hover {
+    color: #000;
+    background-color: #603b76;
+}
+
+a:hover {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+#chatroom_preview {
+    display: block;
+}
+
+
+/* article .column { */
+
+article {
+    display: inline-block;
+    /* float: none; */
+    height: 100%;
+    color: #e7e0cf;
+}
+
+#left {
+    width: 37%;
+    background-color: #272727;
+}
+
+#left-middle {
+    width: 75%;
+    background-color: #272727;
+}
+
+#right {
+    width: 60%;
+    background-color: #5c5c5c;
+    /* float: left; */
+    flex: auto;
+}

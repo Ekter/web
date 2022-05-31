@@ -35,9 +35,6 @@ function checkform() {
         return false;
     }
     return true;
-
-
-
 }
 
 // efface le contenu de l'élément où on affiche
