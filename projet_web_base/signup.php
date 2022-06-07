@@ -2,19 +2,16 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>TP 3 - Exo 4</title>
+        <title>Inscription</title>
         <meta name="author" content="Marc Gaetano">
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <link rel="stylesheet" href="../css/tp3.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <h1>TP 3 - Exo 4</h1>
+        <h1>Inscription</h1>
         <hr>
-
-        <h2>Inscription</h2>
-
-        <form action="dosignup.php" method="post">
+        <form id="log" action="dosignup.php" method="post">
             Choisissez votre login (uniquement des lettres minuscules ou majuscules)
             <br>
             <input type="text" name="login">
@@ -31,14 +28,6 @@
             <input type="reset" value="Annuler">
         </form>
         <?php
-            // à compléter
-            // Dans cette partie, si le paramètre "badsignup" est présent, on affiche
-            // le message d'erreur adéquat, par exemple :
-            // - si le paramètre vaut 1 : "le login ne contient pas que des lettres"
-            // - si le paramètre vaut 2 : "le login est déjà utilisé"
-            // - si la paramètre vaut 3 : "le mot de passe a moins de 4 caractères"
-            // - si la paramètre vaut 4 : "le mot de passe et la vérification sont différents"
-
             if (isset($_GET['badsignup'])) {
                 $badsignup = $_GET['badsignup'];
                 switch ($badsignup) {
@@ -54,10 +43,11 @@
                     case 4:
                         echo '<p class="error">Le mot de passe et la vérification sont différents</p>';
                         break;
-
                 }
             }
 
         ?>
+        <!-- button to redirect to signin.php if the user has already an account -->
+        <a href="signin.php">Déjà inscrit ?</a>
     </body>
 </html>

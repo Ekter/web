@@ -16,10 +16,9 @@
         $line = trim($line);
         $tab = explode(',', $line);
         if (strcmp($tab[0], $login) == 0 && strcmp($tab[1], hash("md5",$password)) == 0) {
-            $_SESSION['user'] = $login;
-			header("Location: index.php");
+            $_SESSION["user"] = $login;
+			header("Location: index.php?redirect=$login");
 		exit();
         }
     }
-    // echo json_encode($_SESSION);
     header('Location: signin.php?badlogin=true');

@@ -64,3 +64,12 @@ article {
     /* float: left; */
     flex: auto;
 }
+
+#log {
+    height: 200px;
+    background-color: #666666;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}

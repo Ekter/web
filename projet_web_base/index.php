@@ -1,10 +1,14 @@
 <?php
-if (isset($_SESSION["user"])) {
+session_start();
+//get user from the $_GET, with replacing all the special characters
+if (isset($_SESSION["user"])){// || isset($_GET["redirect"])) {
+    // print_r($_SESSION);
     $user = $_SESSION["user"];
+    // $_SESSION["user"] = $_GET["redirect"];
 } else {
-    $user="Moi";
-    // header('Location: signin.php');
-    // exit();
+    // $user="Moi";
+    header('Location: signin.php');
+    exit();
 } ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +22,8 @@ foreach ($list_chatrooms_filenames as $file_name) {
     $list_chatrooms[] = explode(".", $file_name)[0];
     $chatrooms_ext[explode(".", $file_name)[0]] = $file_name;
 }
-print_r($list_chatrooms_filenames);
-print_r($list_chatrooms);
+// print_r($list_chatrooms_filenames);
+// print_r($list_chatrooms);
 ?>
 
 <head>
