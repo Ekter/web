@@ -1,9 +1,8 @@
 <?php
 
-   $id = $_POST['user'];
-   $content = trim($_POST['content']);
+   $name=$_GET["name"]; 
 
-   $file=fopen("database/$id.txt","a");
-   $file.="$user:$content";
+   $file=fopen("database/chatroom/$name.csv","w");
    fclose($file);
+   header(Location:"index.php?room=$name");
 ?>
