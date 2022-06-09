@@ -31,9 +31,9 @@ foreach ($list_chatrooms_filenames as $file_name) {
     <title>Chatrooms <?php echo $user?></title>
     <meta name="description" content="Global - free CSS template provided by templatemo.com" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="css/editor.css" rel="stylesheet" type="text/css" />
     <script src="js/simpleajax.js"></script>
     <script src="js/message.js"></script>
+    <script src="js/chatroom.js"></script>
 </head>
 
 <body>

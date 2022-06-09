@@ -73,3 +73,12 @@ article {
     border-radius: 5px;
     margin: 10px;
 }
+
+#create_room {
+    height: 200px;
+    background-color: #666666;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}

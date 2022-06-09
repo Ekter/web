@@ -7,5 +7,5 @@
    $file=fopen("database/chatrooms/$room","a");
    fwrite($file,"\n$user: $content");
    fclose($file);
-
+   header('Location: chatroom.php?room='.$room);
 ?>
